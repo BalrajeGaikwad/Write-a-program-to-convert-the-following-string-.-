@@ -1,0 +1,20 @@
+"""
+Write a program to convert the following string
+
+'Light travels faster than sound. This is why some people appear bright until you hear them speak.'
+
+into
+
+'LIGHT travels faster than SOUND. This is why some people appear bright until you hear them speak.'
+
+"""
+
+sentence='Light travels faster than sound. This is why some people appear bright until you hear them speak.'
+
+
+words = sentence.split()
+for i in range(len(words)):
+    if words[i].lower() in ["light", "sound"]:
+        words[i] = words[i].upper()
+result=" ".join(words)
+print(result)
